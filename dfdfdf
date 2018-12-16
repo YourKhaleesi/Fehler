@@ -10,6 +10,7 @@ void turnString (char string[]);// – string von hinten nach vorn
 int main(void){
 	char a[100];
 	char b[100];
+	
 	int length = getStringLength(a);
 	printf("was moechten Sie speichern?\n");
 	readString(a);
@@ -21,7 +22,7 @@ int main(void){
 	printString(b);
 	
 	
-	turnString(a);
+	turnString(b);
 	printString(a);
 	return 0;
 }
@@ -55,7 +56,7 @@ void turnString (char string[]){
 	int stringEnd=length-1;
 	int stringBegin=1;
 	char temp;
-	
+}	
 	
 	for(int i=1; i<(length/2) ;i++){
 		temp=string[stringBegin];
@@ -67,4 +68,5 @@ void turnString (char string[]){
 }
 		
 		
+	
 	
