@@ -10,8 +10,7 @@ void turnString (char string[]);// – string von hinten nach vorn
 int main(void){
 	char a[100];
 	char b[100];
-	
-	int length = getStringLength(a);
+	//int length = getStringLength(a);
 	printf("was moechten Sie speichern?\n");
 	readString(a);
 	
@@ -22,7 +21,7 @@ int main(void){
 	printString(b);
 	
 	
-	turnString(b);
+	turnString(a);
 	printString(a);
 	return 0;
 }
@@ -46,17 +45,20 @@ void copyString (char toString[], char fromString[]){
 }
 }
 void printString(char string[]){
-	for(int i=0; string[i] != '\0'; i++){
-		printf("%s", string[i]);
-	}
+	int l = getStringLength(string);
+	//for(int i=0; i < l; i++){
+	//	printf("%d", string[i]);
+	//}
+	printf("%s", string);
 }
 
 void turnString (char string[]){
 	int length=getStringLength(string);
-	int stringEnd=length-1;
-	int stringBegin=1;
-	char temp;	
-	for(int i=1; i<(length/2) ;i++){
+	int stringEnd=length-2;
+	int stringBegin=0;
+	char temp;
+	
+	for(int i=0; i<(length/2) ;i++){
 		temp=string[stringBegin];
 		string[stringBegin]=string[stringEnd];
 		string[stringEnd]=temp;
@@ -66,5 +68,4 @@ void turnString (char string[]){
 }
 		
 		
-	
 	
