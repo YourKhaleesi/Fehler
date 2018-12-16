@@ -55,9 +55,7 @@ void turnString (char string[]){
 	int length=getStringLength(string);
 	int stringEnd=length-1;
 	int stringBegin=1;
-	char temp;
-}	
-	
+	char temp;	
 	for(int i=1; i<(length/2) ;i++){
 		temp=string[stringBegin];
 		string[stringBegin]=string[stringEnd];
